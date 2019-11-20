@@ -1,6 +1,9 @@
 # HN top
 
-![screen](https://i.imgur.com/HsZydpq.png)
+<p align="center">
+  <img alt="screenshot" src="https://i.imgur.com/HsZydpq.png">
+</p>
+
 
 ## Run
 

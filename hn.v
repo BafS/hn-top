@@ -29,15 +29,11 @@ fn fetch_story(id int) Story {
 fn fetch_top_stories(num int) []Story {
 	text := http.get_text('${api}/topstories.json')
 
-	stories_ids := json.decode([]int, text) or {
-		exit(1)
-	}
+	stories_ids := json.decode([]int, text) or { exit(1) }
 
 	stories_top_ids := stories_ids.slice(0, num)
 
-	stories := stories_top_ids.map(fetch_story(it))
-
-	return stories
+	return stories_top_ids.map(fetch_story(it))
 }
 
 fn main() {
