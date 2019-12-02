@@ -31,7 +31,7 @@ fn fetch_top_stories(num int) []Story {
 
 	stories_ids := json.decode([]int, text) or { exit(1) }
 
-	stories_top_ids := stories_ids.slice(0, num)
+	stories_top_ids := stories_ids[..num]
 
 	return stories_top_ids.map(fetch_story(it))
 }
