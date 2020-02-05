@@ -1,8 +1,8 @@
 import os
-import http
 import json
 import term
 import flag
+import net.http
 
 const (
 	api = 'https://hacker-news.firebaseio.com/v0'
