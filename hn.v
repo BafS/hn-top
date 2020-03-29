@@ -42,8 +42,8 @@ fn main() {
 	fp.version('v0.1.0')
 	fp.description('Show top HN news')
 	fp.skip_executable()
-	top_num := fp.int('num', 5, 'number of top news to show')
-	source_urls := fp.bool('source_urls', false, 'show source urls')
+	top_num := fp.int('num', `n`, 5, 'number of top news to show')
+	source_urls := fp.bool('source_urls', `u`, false, 'show source urls')
 
 	fp.finalize() or {
 		eprintln(err)
